@@ -31,7 +31,7 @@
             <label for='sign-up-password_confirmation'>Confirm Password</label>
             <input id='sign-up-password_confirmation' type='password' placeholder='confirm password' name='credentials[password_confirmation]'>
 
-            <input type='submit' value='Sign Up:'>
+            <input type='submit' value='Sign Up'>
         </fieldset>
       </form>
 
@@ -62,10 +62,18 @@
 
               <input type='submit' value='Change Password'>
           </fieldset>
+        </form>
 
-          <input type='button' id='create-gear-button' value='Create New Gear Setup'>
+        <input type='button' id='show-gear-button' value='Show My Gear Setups'>
 
-
+        <form id='create-gear-form'>
+          <fieldset>
+              <legend>Create New Fishing Gear Setup:</legend>
+              <input id='rod' name='gear[rod]' type='text' placeholder='Rod'><br>
+              <input id='reel' name='gear[reel]' type='text' placeholder='Reel'><br>
+              <input id='tackle' name='gear[tackle]' type='text' placeholder='Tackle'><br>
+              <input type='submit' value='Create my new gear setup!'><br>
+          </fieldset>
         </form>
 
     </body>

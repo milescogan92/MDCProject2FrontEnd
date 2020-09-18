@@ -13,5 +13,6 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out-button').on('click', authEvents.onSignOut)
-  $('#create-gear-button').on('click', gearEvents.onCreateGear)
+  $('#show-gear-button').on('click', gearEvents.onShowGear)
+  $('#create-gear-form').on('submit', gearEvents.onCreateGear)
 })
