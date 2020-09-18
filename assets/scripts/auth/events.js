@@ -42,6 +42,6 @@ const onSignOut = function (event) {
 module.exports = {
   onSignUp: onSignUp,
   onSignIn: onSignIn,
-  onChangePassword: onChangePasword,
+  onChangePassword: onChangePassword,
   onSignOut: onSignOut
 }
