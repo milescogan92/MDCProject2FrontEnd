@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const onSignUpSuccess = function (response) {
-  $('#message-area').text('Thanks for signing up, ' response.user.email)
+  $('#message-area').text('Thanks for signing up, ' + response.user.email)
   $('#sign-up-form').trigger('reset')
 }
 
@@ -14,7 +14,7 @@ const onSignUpFailure = function (error) {
 
 const onSignInSuccess = function (response) {
   store.user = response.user
-  $('#message-area').text('Thanks for signing in, ' response.user.email)
+  $('#message-area').text('Thanks for signing in ' + response.user.email)
   $('#sign-in-form').trigger('reset')
 }
 
@@ -39,4 +39,15 @@ const onSignOutSuccess = function () {
 
 const onSignOutFailure = function () {
   $('#message-area').text('Error, could not sign out.  Try again.')
+}
+
+module.exports = {
+  onSignUpSuccess: onSignUpSuccess,
+  onSignUpFailure: onSignUpFailure,
+  onSignInSuccess: onSignInSuccess,
+  onSignInFailure: onSignInFailure,
+  onChangePasswordSuccess: onChangePasswordSuccess,
+  onChangePasswordFailure: onChangePasswordFailure,
+  onSignOutSuccess: onSignOutSuccess,
+  onSignOutFailure: onSignOutFailure
 }
