@@ -15,4 +15,6 @@ $(() => {
   $('#sign-out-button').on('click', authEvents.onSignOut)
   $('#index-gear-button').on('click', gearEvents.onIndexGear)
   $('#create-gear-form').on('submit', gearEvents.onCreateGear)
+  $('#update-gear-form').on('submit', gearEvents.onUpdateGear)
+  $('#delete-gear-form').on('submit', gearEvents.onDeleteGear)
 })

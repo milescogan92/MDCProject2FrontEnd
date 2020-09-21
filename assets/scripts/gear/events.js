@@ -21,7 +21,27 @@ const onCreateGear = function (event) {
     .catch(ui.onCreateGearFailure)
 }
 
+const onUpdateGear = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.updateGear(data)
+    .then(ui.onUpdateGearSuccess)
+    .catch(ui.onUpdateGearFailure)
+}
+
+const onDeleteGear = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  api.deleteGear(data)
+    .then(ui.onDeleteGearSuccess)
+    .catch(ui.onDeleteGearFailure)
+}
+
 module.exports = {
   onIndexGear: onIndexGear,
-  onCreateGear: onCreateGear
+  onCreateGear: onCreateGear,
+  onUpdateGear: onUpdateGear,
+  onDeleteGear: onDeleteGear
 }

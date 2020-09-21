@@ -32,9 +32,34 @@ const onCreateGearFailure = function () {
   $('#message-area').text('Gear Setup NOT created, try again.')
 }
 
+const onUpdateGearSuccess = function () {
+  $('#message-area').text('Gear update successful, hooray!')
+}
+
+const onUpdateGearFailure = function () {
+  $('#message-area').text('Gear Update failed, try again.')
+}
+
+const onDeleteGearSuccess = function () {
+  $('#message-area').text('Gear delete successful, goodbye gear!')
+}
+
+const onDeleteGearFailure = function () {
+  $('#message-area').text('Gear delete failed, try deletion again.')
+}
+
+
+
+
+
 module.exports = {
   onIndexGearSuccess: onIndexGearSuccess,
   onIndexGearFailure: onIndexGearFailure,
   onCreateGearSuccess: onCreateGearSuccess,
-  onCreateGearFailure: onCreateGearFailure
+  onCreateGearFailure: onCreateGearFailure,
+  onUpdateGearSuccess: onUpdateGearSuccess,
+  onUpdateGearFailure: onUpdateGearFailure,
+  onDeleteGearSuccess: onDeleteGearSuccess,
+  onDeleteGearFailure: onDeleteGearFailure
+
 }

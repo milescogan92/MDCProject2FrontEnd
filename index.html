@@ -67,10 +67,28 @@
         <form id='create-gear-form'>
           <fieldset>
               <legend>Create New Fishing Gear Setup:</legend>
-              <input id='rod' name='gear[rod]' type='text' placeholder='Rod'><br>
-              <input id='reel' name='gear[reel]' type='text' placeholder='Reel'><br>
-              <input id='tackle' name='gear[tackle]' type='text' placeholder='Tackle'><br>
-              <input type='submit' value='Create my new gear setup!'><br>
+              <input id='create-rod' name='gear[rod]' type='text' placeholder='Rod'><br>
+              <input id='create-reel' name='gear[reel]' type='text' placeholder='Reel'><br>
+              <input id='create-tackle' name='gear[tackle]' type='text' placeholder='Tackle'><br>
+              <input type='submit' value='Create my new gear setup'><br>
+          </fieldset>
+        </form>
+
+        <form id='update-gear-form'>
+          <fieldset>
+              <legend>Update Existing Fishing Gear Setup:</legend>
+              <input id='update-gear-id' name='gear[id]' type='text' placeholder='Gear ID'><br>
+              <input id='update-rod' name='gear[rod]' type='text' placeholder='Rod'><br>
+              <input id='update-reel' name='gear[reel]' type='text' placeholder='Reel'><br>
+              <input id='update-tackle' name='gear[tackle]' type='text' placeholder='Tackle'><br>
+              <input type='submit' value='Update existing gear setup'><br>
+          </fieldset>
+        </form>
+
+        <form id='delete-gear-form'>
+          <fieldset>
+            <legend>Delete Existing Fishing Gear Setup:</legend>
+            <input id ='delete-gear-id' name='gear[id]' type='text' placeholder='Gear ID'>
           </fieldset>
         </form>
 
@@ -79,6 +97,12 @@
         <input type='button' id='index-gear-button' value='Index All Gear Setups'>
         <p id='gear-index'></p>
         </div>
+
+
+
+
+
+
 
     </body>
 </html>

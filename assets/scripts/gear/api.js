@@ -24,7 +24,31 @@ const createGear = function (data) {
   })
 }
 
+const updateGear = function (data) {
+  return $.ajax({
+    url: config.apiUrl + 'gear/:id',
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
+
+const deleteGear = function (data) {
+  return $.ajax({
+    url: config.apiUrl + 'gear/:id',
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
   indexGear: indexGear,
-  createGear: createGear
+  createGear: createGear,
+  updateGear: updateGear,
+  deleteGear: deleteGear
 }
