@@ -5,6 +5,7 @@ const store = require('../store.js')
 const onSignUpSuccess = function (response) {
   $('#message-area').text('Thanks for signing up, ' + response.user.email)
   $('#sign-up-form').trigger('reset')
+  $('#sign-up-form').hide()
 }
 
 const onSignUpFailure = function (error) {
@@ -15,7 +16,16 @@ const onSignUpFailure = function (error) {
 const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message-area').text('Thanks for signing in ' + response.user.email)
+  $('#sign-up-form').hide()
   $('#sign-in-form').trigger('reset')
+  $('#sign-in-form').hide()
+  $('#sign-out-button').show()
+  $('#change-password-form').show()
+  $('#index-gear-button').show()
+  $('#create-gear-form').show()
+  $('#update-gear-form').show()
+  $('#delete-gear-form').show()
+
 }
 
 const onSignInFailure = function (error) {
@@ -35,6 +45,15 @@ const onChangePasswordFailure = function () {
 
 const onSignOutSuccess = function () {
   $('#message-area').text('Signed out successfully.')
+  $('#sign-out-button').hide()
+  $('#change-password-form').hide()
+  $('#index-gear-button').hide()
+  $('#create-gear-form').hide()
+  $('#update-gear-form').hide()
+  $('#delete-gear-form').hide()
+  $('#sign-up-form').show()
+  $('#sign-in-form').show()
+
 }
 
 const onSignOutFailure = function () {
