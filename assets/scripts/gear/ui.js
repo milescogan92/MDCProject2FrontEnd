@@ -19,6 +19,7 @@ const onIndexGearSuccess = function (response) {
   sendhtml += '</ol>'
   console.log(index)
   $('#gear-index').html(sendhtml)
+  $('#gear-index').show()
 }
 
 const onIndexGearFailure = function () {

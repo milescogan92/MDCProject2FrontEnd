@@ -26,6 +26,7 @@ const onSignInSuccess = function (response) {
   $('#update-gear-form').show()
   $('#delete-gear-form').show()
 
+
 }
 
 const onSignInFailure = function (error) {
@@ -48,6 +49,7 @@ const onSignOutSuccess = function () {
   $('#sign-out-button').hide()
   $('#change-password-form').hide()
   $('#index-gear-button').hide()
+  $('#gear-index').hide()
   $('#create-gear-form').hide()
   $('#update-gear-form').hide()
   $('#delete-gear-form').hide()
