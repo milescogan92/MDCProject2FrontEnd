@@ -26,23 +26,28 @@ const createGear = function (data) {
 
 const updateGear = function (data) {
   return $.ajax({
-    url: config.apiUrl + 'gear/:id',
-    method: 'POST',
+    url: config.apiUrl + '/gear/' + data.gear.id,
+    method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: data
+    data: {
+      gear: {
+        rod: data.gear.rod,
+        reel: data.gear.reel,
+        tackle: data.gear.tackle
+      }
+    }
   })
 }
 
-const deleteGear = function (data) {
+const deleteGear = function (gearId) {
   return $.ajax({
-    url: config.apiUrl + 'gear/:id',
+    url: config.apiUrl + '/gear/' + gearId,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token
-    },
-    data: data
+    }
   })
 }
 

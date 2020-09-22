@@ -34,7 +34,8 @@ const onDeleteGear = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
-  api.deleteGear(data)
+  const gearId = data.gear.id
+  api.deleteGear(gearId)
     .then(ui.onDeleteGearSuccess)
     .catch(ui.onDeleteGearFailure)
 }

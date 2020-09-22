@@ -4,7 +4,7 @@ const store = require('../store.js')
 
 const onIndexGearSuccess = function (response) {
   $('#message-area').text('Gear Index successful, see gear below!')
-  store.user = response.user
+  // store.user = response.user
   console.log(response)
   const index = response.gear
   let sendhtml = '<ol>'
@@ -12,7 +12,8 @@ const onIndexGearSuccess = function (response) {
     sendhtml += `<li id=${data._id}>
     Rod: ${data.rod} \n
     Reel: ${data.reel} \n
-    Tackle: ${data.tackle} </li>`
+    Tackle: ${data.tackle} \n
+    ID: ${data._id} </li>`
     return sendhtml
   })
   sendhtml += '</ol>'
