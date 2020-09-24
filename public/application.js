@@ -3928,7 +3928,7 @@ module.exports = getFormFields;
 
 var apiUrl = void 0;
 var apiUrls = {
-  production: '<replace-with-heroku-url>',
+  production: 'https://pacific-brook-92442.herokuapp.com',
   development: 'http://localhost:4741'
 };
 
