@@ -5,7 +5,6 @@ const store = require('../store.js')
 const onIndexGearSuccess = function (response) {
   $('#message-area').text('Gear Index successful, see gear below!')
   // store.user = response.user
-  console.log(response)
   const index = response.gear
   let sendhtml = '<ol>'
   index.forEach(data => {
@@ -17,7 +16,6 @@ const onIndexGearSuccess = function (response) {
     return sendhtml
   })
   sendhtml += '</ol>'
-  console.log(index)
   $('#gear-index').html(sendhtml)
   $('#gear-index').show()
 }
@@ -28,6 +26,7 @@ const onIndexGearFailure = function () {
 
 const onCreateGearSuccess = function () {
   $('#message-area').text('New Gear Setup created successfully!')
+  $('#create-gear-form').trigger('reset')
 }
 
 const onCreateGearFailure = function () {
@@ -36,6 +35,7 @@ const onCreateGearFailure = function () {
 
 const onUpdateGearSuccess = function () {
   $('#message-area').text('Gear update successful, hooray!')
+  $('#update-gear-form').trigger('reset')
 }
 
 const onUpdateGearFailure = function () {
@@ -44,15 +44,12 @@ const onUpdateGearFailure = function () {
 
 const onDeleteGearSuccess = function () {
   $('#message-area').text('Gear delete successful, goodbye gear!')
+  $('#delete-gear-form').trigger('reset')
 }
 
 const onDeleteGearFailure = function () {
   $('#message-area').text('Gear delete failed, try deletion again.')
 }
-
-
-
-
 
 module.exports = {
   onIndexGearSuccess: onIndexGearSuccess,
