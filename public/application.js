@@ -16934,7 +16934,6 @@ var store = __webpack_require__(48);
 var onIndexGearSuccess = function onIndexGearSuccess(response) {
   $('#message-area').text('Gear Index successful, see gear below!');
   // store.user = response.user
-  console.log(response);
   var index = response.gear;
   var sendhtml = '<ol>';
   index.forEach(function (data) {
@@ -16942,7 +16941,6 @@ var onIndexGearSuccess = function onIndexGearSuccess(response) {
     return sendhtml;
   });
   sendhtml += '</ol>';
-  console.log(index);
   $('#gear-index').html(sendhtml);
   $('#gear-index').show();
 };
@@ -16953,6 +16951,7 @@ var onIndexGearFailure = function onIndexGearFailure() {
 
 var onCreateGearSuccess = function onCreateGearSuccess() {
   $('#message-area').text('New Gear Setup created successfully!');
+  $('#create-gear-form').trigger('reset');
 };
 
 var onCreateGearFailure = function onCreateGearFailure() {
@@ -16961,6 +16960,7 @@ var onCreateGearFailure = function onCreateGearFailure() {
 
 var onUpdateGearSuccess = function onUpdateGearSuccess() {
   $('#message-area').text('Gear update successful, hooray!');
+  $('#update-gear-form').trigger('reset');
 };
 
 var onUpdateGearFailure = function onUpdateGearFailure() {
@@ -16969,6 +16969,7 @@ var onUpdateGearFailure = function onUpdateGearFailure() {
 
 var onDeleteGearSuccess = function onDeleteGearSuccess() {
   $('#message-area').text('Gear delete successful, goodbye gear!');
+  $('#delete-gear-form').trigger('reset');
 };
 
 var onDeleteGearFailure = function onDeleteGearFailure() {
