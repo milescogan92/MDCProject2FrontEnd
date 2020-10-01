@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Miles' Fishing Gear Configurator</h1>
+
+      <input type='button' id='sign-out-button' value='Log Out'>
+
+      <p id='message-area'></p>
+
+      <form id='sign-up-form'>
+        <fieldset>
+          <legend>Sign Up:</legend>
+
+            <label for='sign-up-email'>Email</label>
+            <input id='sign-up-email' type='text' placeholder='email' name='credentials[email]'>
+
+            <label for='sign-up-password'>Password</label>
+            <input id='sign-up-password' type='password' placeholder='password' name='credentials[password]'>
+
+            <label for='sign-up-password_confirmation'>Confirm Password</label>
+            <input id='sign-up-password_confirmation' type='password' placeholder='confirm password' name='credentials[password_confirmation]'>
+
+            <input type='submit' value='Sign Up'>
+        </fieldset>
+      </form>
+
+      <form id='sign-in-form'>
+        <fieldset>
+          <legend>Sign In:</legend>
+
+            <label for='sign-in-email'>Email</label>
+            <input id='sign-in-email' type='text' placeholder='email' name='credentials[email]'>
+
+            <label for='sign-in-password'>Password</label>
+            <input id='sign-in-password' type='password' placeholder='password' name='credentials[password]'>
+
+
+            <input type='submit' value='Sign In'>
+          </fieldset>
+        </form>
+
+        <form id='change-password-form'>
+          <fieldset>
+            <legend>Change Password:</legend>
+
+              <label for='change-password-password'>Old Password</label>
+              <input id='change-password-password' type='password' placeholder='old password' name='passwords[old]'>
+
+              <label for='change-password-password_confirmation'>New Password</label>
+              <input id='change-password-password_confirmation' type='password' placeholder='new password' name='passwords[new]'>
+
+              <input type='submit' value='Change Password'>
+          </fieldset>
+        </form>
+
+        <form id='create-gear-form'>
+          <fieldset>
+              <legend>Create New Fishing Gear Setup:</legend>
+              <input id='create-rod' name='gear[rod]' type='text' placeholder='Rod'><br>
+              <input id='create-reel' name='gear[reel]' type='text' placeholder='Reel'><br>
+              <input id='create-tackle' name='gear[tackle]' type='text' placeholder='Tackle'><br>
+              <input type='submit' value='Create my new gear setup'><br>
+          </fieldset>
+        </form>
+
+        <form id='update-gear-form'>
+          <fieldset>
+              <legend>Update Existing Fishing Gear Setup:</legend>
+              <input id='update-gear-id' name='gear[id]' type='text' placeholder='Gear ID'><br>
+              <input id='update-rod' name='gear[rod]' type='text' placeholder='Rod'><br>
+              <input id='update-reel' name='gear[reel]' type='text' placeholder='Reel'><br>
+              <input id='update-tackle' name='gear[tackle]' type='text' placeholder='Tackle'><br>
+              <input type='submit' value='Update existing gear setup'><br>
+          </fieldset>
+        </form>
+
+        <form id='delete-gear-form'>
+          <fieldset>
+            <legend>Delete Existing Fishing Gear Setup:</legend>
+            <input id ='delete-gear-id' name='gear[id]' type='text' placeholder='Gear ID'>
+            <input type='submit' value='Delete gear setup'>
+          </fieldset>
+        </form>
+
+        <div id='gear-index-div'>
+        <input type='button' id='index-gear-button' value='Index All Gear Setups'>
+        <div id='gear-index'></div>
+        </div>
+
+
+
+
+
+
+
+    </body>
+</html>
